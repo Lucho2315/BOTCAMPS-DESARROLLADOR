@@ -43,6 +43,21 @@ formulario.addEventListener('submit', function(evento){
         return; //--- corta la ejecucion del codigo
     }
 
+    mostrarMensaje("Datos enviados correctamente");
+
+    function mostrarMensaje(mensaje){
+        let alerta = document.createElement('p'); 
+        alerta.textContent = mensaje; 
+        alerta.classList.add('correcto');
+        formulario.appendChild(alerta);
+        setTimeout(() => {
+            alerta.remove();
+        }, 5000)
+
+    }
+
+
+
     function mostrarError(mensaje){
         //console.log(mensaje);
         let error = document.createElement('p'); 
@@ -50,6 +65,11 @@ formulario.addEventListener('submit', function(evento){
         error.classList.add('error');
         // console.log(error);
         formulario.appendChild(error);
+
+        setTimeout(() => {
+            error.remove();
+        }, 5000)
+
     }
 
 
