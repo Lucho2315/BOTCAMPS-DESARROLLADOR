@@ -42,7 +42,6 @@ formulario.addEventListener('submit', function(evento){
         mostrarError('Diligencia todos los campos');
         return; //--- corta la ejecucion del codigo
     }
-
     mostrarMensaje("Datos enviados correctamente");
 
     function mostrarMensaje(mensaje){
@@ -57,7 +56,6 @@ formulario.addEventListener('submit', function(evento){
     }
 
 
-
     function mostrarError(mensaje){
         //console.log(mensaje);
         let error = document.createElement('p'); 
@@ -69,6 +67,7 @@ formulario.addEventListener('submit', function(evento){
         setTimeout(() => {
             error.remove();
         }, 5000)
+
 
     }
 
